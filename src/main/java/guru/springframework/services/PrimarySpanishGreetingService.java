@@ -13,6 +13,10 @@ import org.springframework.stereotype.Service;
 public class PrimarySpanishGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;
+    
+    public PrimarySpanishGreetingService(GreetingRepository gr) {
+    	this.greetingRepository = gr;
+    }
 
     @Override
     public String sayGreeting() {
